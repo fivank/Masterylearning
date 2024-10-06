@@ -1,0 +1,7 @@
+i want the quizzes page to include the "start quiz button" (bigger) and thats it , at the default state.
+The "Add New Question" and "Select Active User" should be in the Dashboard page
+The "User Progress" Button is not needed, since it can be found in the sidebar
+The Settings page will include the "Load Data", The "Save Data" and the "Reset", and these buttons will disappear from the bottom section (the bottom section will stay , but with just some small copyright text)
+The colors in the results after the quiz should be improved
+The reset button should have a warning/confirm option
+the reset button should bring the app to the same state as refresh
