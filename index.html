@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mastery Learning Coach Lite</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p4yVZFj7ZVJjp20FsYFt4I+yWUbdu1rvJV+IvE1vH+z3DAH8zAwD1hZcOb6ClKdgWr3Hu0SmtAak3XRtL0Y7Pw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside id="sidebar">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#dashboard" aria-label="Dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#quizzes" aria-label="Quizzes">
+                        <i class="fas fa-book"></i>
+                        <span>Quizzes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#user-progress" aria-label="User Progress">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Progress</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#settings" aria-label="Settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- Main Content Wrapper -->
+    <div id="content-wrapper">
+        <!-- Header -->
+        <header>
+            <button id="hamburger-button" aria-label="Open Navigation Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1>Mastery Learning Coach Lite</h1>
+        </header>
+        <!-- Main Content Area -->
+        <main id="main-content" tabindex="-1">
+            <!-- Dynamic content will be injected here -->
+        </main>
+        <!-- Footer -->
+        <footer>
+            <label for="load-file" id="load-label" role="button" tabindex="0" aria-label="Load Data">Load Data</label>
+            <input type="file" id="load-file" accept=".json" aria-hidden="true">
+            <button id="save-button" disabled aria-disabled="true">Save Data</button>
+            <button id="reset-button">Reset</button>
+        </footer>
+        <!-- Confirmation Message -->
+        <div id="message-box" class="message" role="alert" aria-live="assertive"></div>
+    </div>
+    <!-- JavaScript Code -->
+    <script src="app.js"></script>
+    <!-- Include Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
