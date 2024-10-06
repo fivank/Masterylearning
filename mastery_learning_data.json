@@ -1,0 +1,167 @@
+{
+  "users": [
+    {
+      "userId": "uuid-1234",
+      "username": "JohnDoe",
+      "learningProgress": {
+        "questionsAnsweredCorrectly": [
+          {
+            "questionId": "uuid-q1",
+            "dateTime": "2024-04-01T10:00:00Z",
+            "score": 8.5
+          },
+          {
+            "questionId": "uuid-q3",
+            "dateTime": "2024-10-05T14:41:28.661Z",
+            "score": 6.4
+          },
+          {
+            "questionId": "uuid-q4",
+            "dateTime": "2024-10-05T14:41:28.662Z",
+            "score": 2.4
+          }
+        ],
+        "questionsAnsweredWrong": [
+          {
+            "questionId": "uuid-q2",
+            "dateTime": "2024-04-01T10:05:00Z",
+            "score": 6
+          }
+        ],
+        "questionsNotAnswered": [
+          "beeca627-5105-4d63-8745-d853c37fc7b0"
+        ]
+      }
+    },
+    {
+      "userId": "a81a5a94-4ed5-44a8-a83f-096a32998427",
+      "username": "Sofia",
+      "learningProgress": {
+        "questionsAnsweredCorrectly": [
+          {
+            "questionId": "uuid-q2",
+            "dateTime": "2024-10-05T14:42:35.590Z",
+            "score": 3.6
+          }
+        ],
+        "questionsAnsweredWrong": [
+          {
+            "questionId": "uuid-q4",
+            "dateTime": "2024-10-05T14:42:35.590Z",
+            "score": 2.4
+          },
+          {
+            "questionId": "uuid-q1",
+            "dateTime": "2024-10-05T14:42:35.590Z",
+            "score": 2
+          },
+          {
+            "questionId": "uuid-q3",
+            "dateTime": "2024-10-05T14:42:35.590Z",
+            "score": 6.4
+          },
+          {
+            "questionId": "beeca627-5105-4d63-8745-d853c37fc7b0",
+            "dateTime": "2024-10-05T14:44:40.885Z",
+            "score": 1.06
+          }
+        ],
+        "questionsNotAnswered": []
+      }
+    }
+  ],
+  "topics": [
+    {
+      "topicId": "uuid-t1",
+      "topicName": "Mathematics",
+      "questions": [
+        "uuid-q1",
+        "uuid-q2"
+      ]
+    },
+    {
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692d",
+      "topicName": "family",
+      "questions": [
+        "beeca627-5105-4d63-8745-d853c37fc7b0"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "questionId": "uuid-q1",
+      "topicId": "uuid-t1",
+      "questionText": "What is 2 + 2?",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "5",
+        "D": "6"
+      },
+      "correctAnswer": "B",
+      "difficultyLevel": 1,
+      "effortLevel": 15,
+      "score": 2
+    },
+    {
+      "questionId": "uuid-q2",
+      "topicId": "uuid-t1",
+      "questionText": "What is the derivative of x^2?",
+      "options": {
+        "A": "x",
+        "B": "2x",
+        "C": "x^2",
+        "D": "2"
+      },
+      "correctAnswer": "B",
+      "difficultyLevel": 3,
+      "effortLevel": 60,
+      "score": 3.6
+    },
+    {
+      "questionId": "uuid-q3",
+      "topicId": "uuid-t1",
+      "questionText": "Solve the integral of 1/x dx.",
+      "options": {
+        "A": "ln|x| + C",
+        "B": "x + C",
+        "C": "1/x + C",
+        "D": "e^x + C"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 4,
+      "effortLevel": 120,
+      "score": 6.4
+    },
+    {
+      "questionId": "uuid-q4",
+      "topicId": "uuid-t1",
+      "questionText": "What is the value of pi up to 3 decimal places?",
+      "options": {
+        "A": "3.142",
+        "B": "3.141",
+        "C": "3.143",
+        "D": "3.140"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 30,
+      "score": 2.4
+    },
+    {
+      "questionId": "beeca627-5105-4d63-8745-d853c37fc7b0",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692d",
+      "questionText": "What is the name of the best Papi",
+      "options": {
+        "A": "Antonio",
+        "B": "Juanillo",
+        "C": "Ivan",
+        "D": "Pedopo"
+      },
+      "correctAnswer": "C",
+      "difficultyLevel": 1,
+      "effortLevel": 10,
+      "score": 1.06
+    }
+  ]
+}
