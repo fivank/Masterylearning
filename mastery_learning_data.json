@@ -68,6 +68,21 @@
         ],
         "questionsNotAnswered": []
       }
+    },
+    {
+      "userId": "da6fd107-0d82-4dbb-a1dc-994b01748006",
+      "username": "Daniel",
+      "learningProgress": {
+        "questionsAnsweredCorrectly": [],
+        "questionsAnsweredWrong": [],
+        "questionsNotAnswered": [
+          "uuid-q1",
+          "uuid-q2",
+          "uuid-q3",
+          "uuid-q4",
+          "beeca627-5105-4d63-8745-d853c37fc7b0"
+        ]
+      }
     }
   ],
   "topics": [
