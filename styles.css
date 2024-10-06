@@ -14,7 +14,7 @@
     --success-color: #2ecc71;
     --error-color: #e74c3c;
     --dark-bg: #2c3e50;
-    /* Dark blue for sidebar, title, and footer */
+    /* Dark blue for title and footer */
     --green-blue: #51b2db;
     /* Lighter green with blue tone */
 }
@@ -31,127 +31,29 @@ body {
     background-color: var(--primary-background);
     color: var(--text-color);
     display: flex;
-    min-height: 100vh;
-}
-
-/* Sidebar Styling */
-#sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 220px;
-    height: 100%;
-    background-color: var(--dark-bg);
-    /* Dark blue */
-    color: #ecf0f1;
-    /* Light gray */
-    box-shadow: 2px 0 5px var(--shadow-color);
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: left 0.3s ease;
-    z-index: 1000;
-}
-
-#sidebar nav ul {
-    list-style: none;
-    padding: 20px 0;
-}
-
-#sidebar nav ul li {
-    padding: 15px 20px;
-}
-
-#sidebar nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-#sidebar nav ul li a:hover,
-#sidebar nav ul li a.active {
-    background-color: #34495e;
-    border-radius: 5px;
-}
-
-#sidebar nav ul li a i {
-    margin-right: 10px;
-    font-size: 1.2em;
-}
-
-/* Hamburger Button Styling */
-#hamburger-button {
-    background: none;
-    border: none;
-    color: var(--button-text);
-    font-size: 1.5em;
-    cursor: pointer;
-    display: none;
-    /* Hidden on larger screens */
-    z-index: 1100;
-    /* Ensure it's above the sidebar */
-}
-
-@media (max-width: 480px) {
-    #hamburger-button {
-        display: block;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-    }
-
-    #sidebar {
-        left: -220px;
-    }
-
-    #sidebar.open {
-        left: 0;
-    }
-
-    #content-wrapper {
-        margin-left: 0;
-    }
+    /* Added to stack header, content, and footer vertically */
+    min-height: 100vh;
 }
 
 /* Content Wrapper */
 #content-wrapper {
-    margin-left: 220px;
-    /* Same as sidebar width */
-    padding: 20px;
-    transition: margin-left 0.3s ease;
     width: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
     min-height: 100vh;
-}
-
-@media (max-width: 768px) {
-    #sidebar {
-        width: 60px;
-    }
-
-    #sidebar nav ul li a span {
-        display: none;
-    }
-
-    #content-wrapper {
-        margin-left: 60px;
-    }
 }
 
 /* Header Styling */
 header {
     background-color: var(--dark-bg);
-    /* Same color as sidebar */
+    /* Same color as footer */
     color: var(--button-text);
     padding: 20px 10px;
     text-align: center;
     flex-shrink: 0;
     box-shadow: 0 2px 4px var(--shadow-color);
-    position: relative;
-    /* To contain the absolute hamburger button */
 }
 
 header h1 {
@@ -174,7 +76,7 @@ main {
 /* Footer Styling */
 footer {
     background-color: var(--dark-bg);
-    /* Same color as sidebar */
+    /* Same color as header */
     padding: 15px 20px;
     display: flex;
     justify-content: center;
@@ -439,6 +341,17 @@ input[type="number"]:focus {
     font-size: 1.2em;
 }
 
+.dashboard-container .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-container .menu-buttons button {
+    width: 200px;
+    margin: 10px 0;
+}
+
 /* Settings Styles */
 .settings-container {
     text-align: center;
@@ -451,16 +364,4 @@ input[type="number"]:focus {
 
 .settings-container p {
     font-size: 1.2em;
-}
-
-/* Menu Buttons */
-.menu-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu-buttons button {
-    width: 200px;
-    margin: 10px 0;
 }

@@ -13,18 +13,19 @@ let activeUserId = null;
 let currentSection = 'dashboard'; // Default section
 
 // DOM Elements
-let mainContent;
-let loadFileInput;
-let saveButton;
-let resetButton;
-let messageBox;
-let sidebarLinks;
-let hamburgerButton;
-let sidebar;
-let contentWrapper;
+const mainContent = document.getElementById('main-content');
+const loadFileInput = document.getElementById('load-file');
+const saveButton = document.getElementById('save-button');
+const resetButton = document.getElementById('reset-button');
+const messageBox = document.getElementById('message-box');
+const hamburgerButton = document.getElementById('hamburger-button');
 
 // Event Listeners
 document.addEventListener('DOMContentLoaded', initializeApp);
+loadFileInput.addEventListener('change', loadData);
+saveButton.addEventListener('click', saveData);
+resetButton.addEventListener('click', resetApp);
+hamburgerButton.addEventListener('click', toggleSidebar);
 
 // Functions
 
@@ -32,30 +33,9 @@ document.addEventListener('DOMContentLoaded', initializeApp);
  * Initializes the application by loading data and setting up the initial UI.
  */
 async function initializeApp() {
-    // Select DOM elements
-    mainContent = document.getElementById('main-content');
-    loadFileInput = document.getElementById('load-file');
-    saveButton = document.getElementById('save-button');
-    resetButton = document.getElementById('reset-button');
-    messageBox = document.getElementById('message-box');
-    sidebarLinks = document.querySelectorAll('#sidebar nav ul li a');
-    hamburgerButton = document.getElementById('hamburger-button');
-    sidebar = document.getElementById('sidebar');
-    contentWrapper = document.getElementById('content-wrapper');
-
-    // Attach event listeners
-    loadFileInput.addEventListener('change', loadData);
-    saveButton.addEventListener('click', saveData);
-    resetButton.addEventListener('click', resetApp);
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', navigateSection);
-    });
-    hamburgerButton.addEventListener('click', toggleSidebar);
-
-    // Initialize application state
-    disableSaveButton();
+    disableAllButtons();
     await loadInitialData();
-    highlightActiveSidebarLink(currentSection);
+    showDashboard();
     setupResponsiveSidebar();
 }
 
@@ -67,7 +47,7 @@ async function loadInitialData() {
     if (storedData) {
         try {
             data = JSON.parse(storedData);
-            enableSaveButton();
+            enableButtonsAfterLoad();
             showMessage('Data loaded from local storage.', 'success');
             showSelectUserForm();
         } catch (error) {
@@ -93,12 +73,11 @@ async function fetchDefaultData() {
         if (validateJSONStructure(defaultData)) {
             data = defaultData;
             saveDataToLocalStorage();
-            enableSaveButton();
+            enableButtonsAfterLoad();
             showMessage('Default data loaded successfully!', 'success');
             showSelectUserForm();
         } else {
             showMessage('Invalid default data format.', 'error');
-            showWelcomeScreen();
         }
     } catch (error) {
         console.error('Error fetching default data:', error);
@@ -108,45 +87,37 @@ async function fetchDefaultData() {
 }
 
 /**
- * Disables the save button initially.
+ * Disables buttons that should not be interactable at the start.
  */
-function disableSaveButton() {
+function disableAllButtons() {
     saveButton.disabled = true;
     saveButton.setAttribute('aria-disabled', 'true');
 }
 
 /**
- * Enables the save button after data is loaded.
+ * Enables buttons after data has been successfully loaded.
  */
-function enableSaveButton() {
+function enableButtonsAfterLoad() {
     saveButton.disabled = false;
     saveButton.setAttribute('aria-disabled', 'false');
 }
 
 /**
- * Highlights the active link in the sidebar based on the current section.
+ * Highlights the active section (currently not used since sidebar is removed).
+ * Placeholder function in case future navigation is added.
  * @param {string} section - The current active section.
  */
-function highlightActiveSidebarLink(section) {
-    sidebarLinks.forEach(link => {
-        if (link.getAttribute('href') === `#${section}`) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
+function highlightActiveSection(section) {
+    // Placeholder for future enhancements
 }
 
 /**
- * Navigates to the selected section when a sidebar link is clicked.
- * @param {Event} event - The click event.
+ * Navigates to the selected section.
+ * @param {string} section - The section to navigate to.
  */
-function navigateSection(event) {
-    event.preventDefault();
-    const targetSection = event.currentTarget.getAttribute('href').substring(1);
-    currentSection = targetSection;
-    highlightActiveSidebarLink(targetSection);
-    renderSection(targetSection);
+function navigateToSection(section) {
+    currentSection = section;
+    renderSection(section);
 }
 
 /**
@@ -208,11 +179,10 @@ function resetApp() {
     currentSection = 'dashboard';
 
     // Reset UI
-    disableSaveButton();
+    disableAllButtons();
     loadFileInput.value = '';
     localStorage.removeItem('appData');
     showWelcomeScreen();
-    highlightActiveSidebarLink('dashboard');
     showMessage('Application reset to initial state.', 'success');
 }
 
@@ -225,10 +195,19 @@ function showDashboard() {
     dashboardContainer.classList.add('dashboard-container');
     dashboardContainer.innerHTML = `
         <h2>Dashboard</h2>
-        <p>Welcome to the Mastery Learning Coach Lite! Use the sidebar to navigate through the app.</p>
+        <p>Welcome to the Mastery Learning Coach Lite! Use the options below to navigate through the app.</p>
+        <div class="button-group menu-buttons">
+            <button id="select-user-button">Select Active User</button>
+            <button id="add-user-button">Add New User</button>
+            <button id="load-question-button">Load Questions</button>
+        </div>
     `;
     mainContent.appendChild(dashboardContainer);
     setFocus(dashboardContainer);
+
+    document.getElementById('select-user-button').addEventListener('click', showSelectUserForm);
+    document.getElementById('add-user-button').addEventListener('click', showAddUserForm);
+    document.getElementById('load-question-button').addEventListener('click', loadData);
 }
 
 /**
@@ -295,7 +274,7 @@ function showSelectUserForm() {
         if (activeUserId) {
             showMainUserMenu();
         } else {
-            showWelcomeScreen();
+            showDashboard();
         }
     });
 
@@ -386,7 +365,7 @@ function showMainUserMenu() {
     userMenu.innerHTML = `
         <h2>Welcome, ${activeUser.username}!</h2>
         <div class="button-group menu-buttons">
-            <button id="start-quiz-button" ${data.questions.length === 0 ? 'disabled aria-disabled="true"' : ''}>Start Quiz</button>
+            <button id="start-quiz-button" ${getAvailableQuestions(activeUser).length === 0 ? 'disabled aria-disabled="true"' : ''}>Start Quiz</button>
             <button id="add-question-button">Add New Question</button>
             <button id="user-progress-button">User Progress</button>
             <button id="select-user-button">Select Active User</button>
@@ -399,6 +378,15 @@ function showMainUserMenu() {
     document.getElementById('add-question-button').addEventListener('click', showAddQuestionForm);
     document.getElementById('user-progress-button').addEventListener('click', showUserProgress);
     document.getElementById('select-user-button').addEventListener('click', showSelectUserForm);
+}
+
+/**
+ * Retrieves available questions for the active user.
+ * @param {Object} user - The active user object.
+ * @returns {Array} Array of available question objects.
+ */
+function getAvailableQuestions(user) {
+    return data.questions.filter(q => user.learningProgress.questionsNotAnswered.includes(q.questionId));
 }
 
 /**
@@ -631,24 +619,21 @@ function startQuiz() {
         return;
     }
 
-    quizInProgress = true;
-    currentQuestionIndex = 0;
-    userAnswers = [];
-
-    // Filter questions not yet answered
-    const questionsToAsk = data.questions.filter(q => activeUser.learningProgress.questionsNotAnswered.includes(q.questionId));
-
-    if (questionsToAsk.length === 0) {
+    const availableQuestions = getAvailableQuestions(activeUser);
+    if (availableQuestions.length === 0) {
         showMessage('No new questions to answer. All questions have been answered.', 'success');
         renderSection(currentSection);
         return;
     }
 
-    // Shuffle questions
-    shuffleArray(questionsToAsk);
+    quizInProgress = true;
+    currentQuestionIndex = 0;
+    userAnswers = [];
 
-    showQuestion(questionsToAsk);
-    highlightActiveSidebarLink('quizzes');
+    // Shuffle questions
+    shuffleArray(availableQuestions);
+
+    showQuestion(availableQuestions);
 }
 
 /**
@@ -915,16 +900,14 @@ function showCurrentQuiz() {
         return;
     }
 
-    // Find unanswered questions
-    const questionsToAsk = data.questions.filter(q => activeUser.learningProgress.questionsNotAnswered.includes(q.questionId));
-
-    if (questionsToAsk.length === 0) {
+    const availableQuestions = getAvailableQuestions(activeUser);
+    if (availableQuestions.length === 0) {
         showMessage('No new questions to answer. All questions have been answered.', 'success');
         showMainUserMenu();
         return;
     }
 
-    showQuestion(questionsToAsk);
+    showQuestion(availableQuestions);
 }
 
 /**
@@ -1061,10 +1044,9 @@ function loadData() {
             if (validateJSONStructure(loadedData)) {
                 data = loadedData;
                 saveDataToLocalStorage();
-                enableSaveButton();
+                enableButtonsAfterLoad();
                 showMessage('Data loaded successfully!', 'success');
                 showSelectUserForm(); // Automatically navigate to Select Active User
-                highlightActiveSidebarLink('quizzes');
             } else {
                 showMessage('Invalid data format. Please ensure the JSON has users, topics, and questions arrays with the correct structure.', 'error');
             }
@@ -1115,23 +1097,18 @@ function saveDataToLocalStorage() {
 
 /**
  * Toggles the sidebar visibility on smaller screens.
+ * Removed since sidebar is no longer present.
  */
 function toggleSidebar() {
-    sidebar.classList.toggle('open');
+    // Sidebar functionality removed
 }
 
 /**
  * Sets up responsive behavior for the sidebar.
+ * Removed since sidebar is no longer present.
  */
 function setupResponsiveSidebar() {
-    // Close sidebar when clicking outside on small screens
-    document.addEventListener('click', function(event) {
-        if (window.innerWidth <= 480) {
-            if (!sidebar.contains(event.target) && !hamburgerButton.contains(event.target)) {
-                sidebar.classList.remove('open');
-            }
-        }
-    });
+    // Sidebar functionality removed
 }
 
 /**
@@ -1149,5 +1126,13 @@ function finishQuizEarly(questionsToAsk) {
     }).filter(q => q !== undefined);
 
     showResults(answeredQuestions, true);
-    highlightActiveSidebarLink('quizzes');
+}
+
+/**
+ * Retrieves available questions for the active user.
+ * @param {Object} user - The active user object.
+ * @returns {Array} Array of available question objects.
+ */
+function getAvailableQuestions(user) {
+    return data.questions.filter(q => user.learningProgress.questionsNotAnswered.includes(q.questionId));
 }
