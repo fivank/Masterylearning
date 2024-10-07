@@ -161,7 +161,7 @@ input[type="number"] {
 input[type="text"]:focus,
 select:focus,
 input[type="number"]:focus {
-    border-color: var(--accent-teal);
+    border-color: var(--green-blue);
     outline: none;
 }
 
@@ -234,7 +234,7 @@ input[type="number"]:focus {
 
 .progress-bar {
     height: 100%;
-    background-color: var(--accent-teal);
+    background-color: var(--green-blue);
     width: 0%;
     transition: width 0.3s ease;
 }
@@ -278,7 +278,7 @@ input[type="number"]:focus {
 }
 
 .score-summary span {
-    color: var(--accent-teal);
+    color: var(--green-blue);
     font-weight: bold;
 }
 
@@ -320,7 +320,7 @@ input[type="number"]:focus {
     margin: 0 auto;
     padding: 12px 20px;
     font-size: 1em;
-    background-color: var(--accent-teal);
+    background-color: var(--green-blue);
 }
 
 .return-button:hover {

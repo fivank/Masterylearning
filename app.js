@@ -363,7 +363,7 @@ function showMainUserMenu() {
     const activeUser = data.users.find(u => u.userId === activeUserId);
     userMenu.classList.add('center');
     userMenu.innerHTML = `
-        <h2>Welcome, ${activeUser.username}!</h2>
+        <h2>Hello, ${activeUser.username}!</h2>
         <div class="button-group menu-buttons">
             <button id="start-quiz-button" ${getAvailableQuestions(activeUser).length === 0 ? 'disabled aria-disabled="true"' : ''}>Start Quiz</button>
             <button id="add-question-button">Add New Question</button>
@@ -1116,10 +1116,10 @@ function setupResponsiveSidebar() {
  * @param {Array} questionsToAsk - The array of questions that were asked.
  */
 function finishQuizEarly(questionsToAsk) {
-    if (userAnswers.length === 0) {
-        showMessage('You have not answered any questions yet.', 'error');
-        return;
-    }
+    // if (userAnswers.length === 0) {
+    //     showMessage('You have not answered any questions yet.', 'error');
+    //     return;
+    // }
 
     const answeredQuestions = userAnswers.map(answer => {
         return data.questions.find(q => q.questionId === answer.questionId);
