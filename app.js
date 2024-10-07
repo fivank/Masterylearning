@@ -198,16 +198,12 @@ function showDashboard() {
         <p>Welcome to the Mastery Learning Coach Lite! Use the options below to navigate through the app.</p>
         <div class="button-group menu-buttons">
             <button id="select-user-button">Select Active User</button>
-            <button id="add-user-button">Add New User</button>
-            <button id="load-question-button">Load Questions</button>
         </div>
     `;
     mainContent.appendChild(dashboardContainer);
     setFocus(dashboardContainer);
 
     document.getElementById('select-user-button').addEventListener('click', showSelectUserForm);
-    document.getElementById('add-user-button').addEventListener('click', showAddUserForm);
-    document.getElementById('load-question-button').addEventListener('click', loadData);
 }
 
 /**
