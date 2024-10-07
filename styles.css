@@ -168,25 +168,24 @@ input[type="number"]:focus {
 
 /* Message Box Styling */
 .message {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px 20px;
-    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(135, 154, 176, 0.5);
     color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
     display: none;
     z-index: 2000;
-    box-shadow: 0 2px 4px var(--shadow-color);
-    max-width: 90%;
-    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgb(135, 154, 176, 0.5);
+    max-width: 80%;
+    text-align: center;
 }
 
-.message.success {
-    background-color: var(--success-color);
-}
-
+.message.success,
 .message.error {
-    background-color: var(--error-color);
+    background-color: rgba(44, 62, 80, 0.8);
 }
 
 /* Quiz Styles */

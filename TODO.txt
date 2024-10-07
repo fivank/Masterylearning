@@ -1,6 +1,37 @@
-analyze the way the app takes care of responsiveness for differnt screen sizes and resolutions (for mobile, tablet, pc, portrait, landscape). give me a concise list of what has bee done to this respect. the problems and possible simple solutions for that
+improve UI
 
-improve look and feel. button design.
+where in the code is define the position and look of the messages for file loaded, etc?
+
+messages for file loaded, etc, should appear without distrubing the user experience:
+in the middle, just below the title bar, in a semi transparent smaller dark blue container with white letters. how can i change the code to achive that?
+
+in the main page after a user has been selected, where the buttons start quiz, select user, etc are, qhere is it defined in the code how the buttons look like and how they are structured?
+
+how would this have to be changed so that the first 2 buttons are in a horizontal container that goes the whole width and another horizontal container just below that also goes the wohle with with the other 2 buttons?
+
+
+where is defined for the buttons in the bottom: load data, etc,... how they are structured and the container? where is the dark background defined?
+the size?? the color?
+
+how can i change it so that the buttons are in a single horizontal container with this dark color background but this container can grow downwards if needed and the buttons will rearrange one below the other or so automatically when the size is not big enough?
+
+how can i make the size of these buttons smaller ?
+
+
+how can i make the title bar be always visible on the top and only the rest of the page will scroll?
+
+
+in the page of the quiz results, where is it defined the position of the return to main menu?
+
+what has to change in the code to place the return to main menu button below the container with the quiz results?
+
+
+
+
+
+
+--
+
 
 improve responsiveness.
 
@@ -14,3 +45,13 @@ the reset button should bring the app to the same state as refresh
 the app should save at which dates and times each question was answered in the json file , not only the last time, but the times before, both for correct and incorrect. Then the app should use this information for a more intelligent way of building the next quiz: in the next quiz will be included not only questions not answered, but also the questions answered wrongly. In addition to that, the questions answered correctly, will be evaluated by how often it were answered wrongly and correctly and when these questions were answerd correctly, so that at the right time the questions will be added to the quiz for implementing a smart spaced repetition method for better learning.
 
 improve look and feel. new ideas.
+
+improve look and feel. button design.
+
+
+UX
+
+the button "next question" within the quiz is not necessary. Where is the button and the behaviour specified in the code?
+
+how can i remove the button and make the quiz jump to the next question each time a question was answered?
+
