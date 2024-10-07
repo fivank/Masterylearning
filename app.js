@@ -335,15 +335,18 @@ function addNewUser(event) {
         };
 
         data.users.push(newUser);
+        activeUserId = userId; // Automatically select the new user
         saveDataToLocalStorage();
 
-        showMessage(`User "${username}" added successfully!`, 'success');
-        showSelectUserForm();
+        showMessage(`User "${username}" added and selected as active user!`, 'success');
+        showMainUserMenu();
     } else {
         showMessage('Please enter a username.', 'error');
         document.getElementById('username').focus();
     }
 }
+
+// Rest of the code remains the same...
 
 /**
  * Displays the main user menu with options like starting a quiz, adding questions, etc.
