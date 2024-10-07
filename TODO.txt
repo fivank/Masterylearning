@@ -1,9 +1,5 @@
 improve UI
 
-where is defined he appearance of the "Hello, <user name>" and the position and distance to the other elements?
-
-how can the code be changed, so that there is going to be certain distance between the "Hello <user name>.." message to the  2 containers each one containing 2 buttons?
-
 
 where is defined for the buttons in the bottom: load data, etc,... how they are structured and the container? where is the dark background defined?
 the size?? the color?

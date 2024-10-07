@@ -32,7 +32,6 @@ body {
     color: var(--text-color);
     display: flex;
     flex-direction: column;
-    /* Added to stack header, content, and footer vertically */
     min-height: 100vh;
     font-size: 16px;
 }
@@ -48,7 +47,6 @@ body {
 /* Header Styling */
 header {
     background-color: var(--dark-bg);
-    /* Same color as footer */
     color: var(--button-text);
     padding: 20px 10px;
     text-align: center;
@@ -69,18 +67,15 @@ main {
     justify-content: center;
     align-items: center;
     outline: none;
-    /* Remove default outline */
     overflow-y: auto;
 }
 
 /* Footer Styling */
 footer {
     background-color: var(--dark-bg);
-    /* Same color as header */
     padding: 15px 20px;
     display: flex;
     justify-content: center;
-    /* Center the buttons */
     align-items: center;
     flex-shrink: 0;
     border-top: 1px solid #ddd;
@@ -98,7 +93,6 @@ label {
     cursor: pointer;
     transition: background-color 0.3s ease, outline 0.3s ease;
     background-color: var(--green-blue);
-    /* Lighter green with a blue tone */
     color: var(--button-text);
     min-width: 150px;
 }
@@ -183,9 +177,20 @@ input[type="number"]:focus {
     text-align: center;
 }
 
-.message.success,
+.message.success {
+    background-color: var(--success-color);
+}
+
 .message.error {
-    background-color: rgba(44, 62, 80, 0.8);
+    background-color: var(--error-color);
+}
+
+/* Center container */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Quiz Styles */
@@ -225,6 +230,7 @@ input[type="number"]:focus {
     cursor: pointer;
 }
 
+/* Progress Bar */
 .progress-bar-container {
     width: 100%;
     height: 20px;
@@ -295,6 +301,7 @@ input[type="number"]:focus {
     margin-bottom: 10px;
 }
 
+/* User Progress Styles */
 .user-progress-container {
     width: 100%;
     max-width: 800px;
@@ -311,10 +318,6 @@ input[type="number"]:focus {
 }
 
 .user-progress-container ul li {
-    margin-bottom: 10px;
-}
-
-.average-stat ul li {
     margin-bottom: 10px;
 }
 
