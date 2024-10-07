@@ -1,13 +1,8 @@
 improve UI
 
-where in the code is define the position and look of the messages for file loaded, etc?
+where is defined he appearance of the "Hello, <user name>" and the position and distance to the other elements?
 
-messages for file loaded, etc, should appear without distrubing the user experience:
-in the middle, just below the title bar, in a semi transparent smaller dark blue container with white letters. how can i change the code to achive that?
-
-in the main page after a user has been selected, where the buttons start quiz, select user, etc are, qhere is it defined in the code how the buttons look like and how they are structured?
-
-how would this have to be changed so that the first 2 buttons are in a horizontal container that goes the whole width and another horizontal container just below that also goes the wohle with with the other 2 buttons?
+how can the code be changed, so that there is going to be certain distance between the "Hello <user name>.." message to the  2 containers each one containing 2 buttons?
 
 
 where is defined for the buttons in the bottom: load data, etc,... how they are structured and the container? where is the dark background defined?

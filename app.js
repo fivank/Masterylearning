@@ -346,8 +346,6 @@ function addNewUser(event) {
     }
 }
 
-// Rest of the code remains the same...
-
 /**
  * Displays the main user menu with options like starting a quiz, adding questions, etc.
  */
@@ -362,10 +360,15 @@ function showMainUserMenu() {
     const activeUser = data.users.find(u => u.userId === activeUserId);
     userMenu.classList.add('center');
     userMenu.innerHTML = `
-        <h2>Hello, ${activeUser.username}!</h2>
-        <div class="button-group menu-buttons">
+        <div class="button-row">
+        <h1>Hello, ${activeUser.username}!</h1>
+        <br><br>
+        </div>
+        <div class="button-row">
             <button id="start-quiz-button" ${getAvailableQuestions(activeUser).length === 0 ? 'disabled aria-disabled="true"' : ''}>Start Quiz</button>
             <button id="add-question-button">Add New Question</button>
+        </div>
+        <div class="button-row">
             <button id="user-progress-button">User Progress</button>
             <button id="select-user-button">Select Active User</button>
         </div>
@@ -782,6 +785,7 @@ function showResults(questionsToAsk, isPartial = false) {
             resultsContainer.appendChild(notAnsweredSection);
         }
     }
+
 
     // Calculate Average Scores
     const totalCorrectScores = activeUser.learningProgress.questionsAnsweredCorrectly.reduce((acc, curr) => acc + curr.score, 0);
