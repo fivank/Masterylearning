@@ -1,113 +1,257 @@
 {
-  "users": [
-    {
-      "userId": "da6fd107-0d82-4dbb-a1dc-994b01748006",
-      "username": "Daniel",
-      "learningProgress": {
-        "questionsAnsweredCorrectly": [],
-        "questionsAnsweredWrong": [],
-        "questionsNotAnswered": [
-          "uuid-q1",
-          "uuid-q2",
-          "uuid-q3",
-          "uuid-q4",
-          "beeca627-5105-4d63-8745-d853c37fc7b0"
-        ]
-      }
-    }
-  ],
+  "users": [],
   "topics": [
     {
-      "topicId": "uuid-t1",
-      "topicName": "Mathematics",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "topicName": "Multiplication",
       "questions": [
-        "uuid-q1",
-        "uuid-q2"
-      ]
-    },
-    {
-      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692d",
-      "topicName": "Family",
-      "questions": [
-        "beeca627-5105-4d63-8745-d853c37fc7b0"
+        "uuid-q10", "uuid-q11", "uuid-q12", "uuid-q13", "uuid-q14",
+        "uuid-q15", "uuid-q16", "uuid-q17", "uuid-q18", "uuid-q28",
+        "uuid-q30", "uuid-q31", "uuid-q32", "uuid-q33", "uuid-q34",
+        "uuid-q35", "uuid-q36", "uuid-q37", "uuid-q38", "uuid-q39"
       ]
     }
   ],
   "questions": [
     {
-      "questionId": "uuid-q1",
-      "topicId": "uuid-t1",
-      "questionText": "What is 2 + 2?",
+      "questionId": "uuid-q10",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 5 * 10?",
       "options": {
-        "A": "3",
-        "B": "4",
-        "C": "5",
-        "D": "6"
-      },
-      "correctAnswer": "B",
-      "difficultyLevel": 1,
-      "effortLevel": 15,
-      "score": 2
-    },
-    {
-      "questionId": "uuid-q2",
-      "topicId": "uuid-t1",
-      "questionText": "What is the derivative of x^2?",
-      "options": {
-        "A": "x",
-        "B": "2x",
-        "C": "x^2",
-        "D": "2"
-      },
-      "correctAnswer": "B",
-      "difficultyLevel": 3,
-      "effortLevel": 60,
-      "score": 3.6
-    },
-    {
-      "questionId": "uuid-q3",
-      "topicId": "uuid-t1",
-      "questionText": "Solve the integral of 1/x dx.",
-      "options": {
-        "A": "ln|x| + C",
-        "B": "x + C",
-        "C": "1/x + C",
-        "D": "e^x + C"
+        "A": "50",
+        "B": "40",
+        "C": "60",
+        "D": "55"
       },
       "correctAnswer": "A",
-      "difficultyLevel": 4,
-      "effortLevel": 120,
-      "score": 6.4
+      "difficultyLevel": 1,
+      "effortLevel": 10,
+      "score": 1.5
     },
     {
-      "questionId": "uuid-q4",
-      "topicId": "uuid-t1",
-      "questionText": "What is the value of pi up to 3 decimal places?",
+      "questionId": "uuid-q11",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 8 * 20?",
       "options": {
-        "A": "3.142",
-        "B": "3.141",
-        "C": "3.143",
-        "D": "3.140"
+        "A": "160",
+        "B": "150",
+        "C": "170",
+        "D": "165"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 1,
+      "effortLevel": 10,
+      "score": 1.5
+    },
+    {
+      "questionId": "uuid-q12",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 7 * 30?",
+      "options": {
+        "A": "210",
+        "B": "200",
+        "C": "220",
+        "D": "215"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 1,
+      "effortLevel": 10,
+      "score": 1.5
+    },
+    {
+      "questionId": "uuid-q13",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 9 * 40?",
+      "options": {
+        "A": "360",
+        "B": "350",
+        "C": "370",
+        "D": "365"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 1,
+      "effortLevel": 10,
+      "score": 1.5
+    },
+    {
+      "questionId": "uuid-q14",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 3 * 50?",
+      "options": {
+        "A": "150",
+        "B": "140",
+        "C": "160",
+        "D": "155"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 1,
+      "effortLevel": 10,
+      "score": 1.5
+    },
+    {
+      "questionId": "uuid-q28",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 20 * 20?",
+      "options": {
+        "A": "400",
+        "B": "390",
+        "C": "410",
+        "D": "405"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 1,
+      "effortLevel": 10,
+      "score": 1.5
+    },
+    {
+      "questionId": "uuid-q30",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 35 * 70?",
+      "options": {
+        "A": "2450",
+        "B": "245",
+        "C": "2550",
+        "D": "257"
+      },
+      "correctAnswer": "B",
+      "difficultyLevel": 2,
+      "effortLevel": 30,
+      "score": 2.5
+    },
+    {
+      "questionId": "uuid-q31",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 300 * 3?",
+      "options": {
+        "A": "900",
+        "B": "800",
+        "C": "910",
+        "D": "905"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 20,
+      "score": 2.2
+    },
+    {
+      "questionId": "uuid-q32",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 150 * 5?",
+      "options": {
+        "A": "750",
+        "B": "800",
+        "C": "760",
+        "D": "755"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 25,
+      "score": 2.3
+    },
+    {
+      "questionId": "uuid-q33",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 45 * 15?",
+      "options": {
+        "A": "675",
+        "B": "685",
+        "C": "655",
+        "D": "695"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 25,
+      "score": 2.4
+    },
+    {
+      "questionId": "uuid-q34",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 25 * 30?",
+      "options": {
+        "A": "750",
+        "B": "740",
+        "C": "760",
+        "D": "755"
       },
       "correctAnswer": "A",
       "difficultyLevel": 2,
       "effortLevel": 30,
-      "score": 2.4
+      "score": 2.5
     },
     {
-      "questionId": "beeca627-5105-4d63-8745-d853c37fc7b0",
-      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692d",
-      "questionText": "What is the name of the best Papi?",
+      "questionId": "uuid-q35",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 80 * 11?",
       "options": {
-        "A": "Antonio",
-        "B": "Juanillo",
-        "C": "Ivan",
-        "D": "Pedopo"
+        "A": "880",
+        "B": "800",
+        "C": "890",
+        "D": "870"
       },
-      "correctAnswer": "C",
-      "difficultyLevel": 1,
-      "effortLevel": 10,
-      "score": 1.06
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 28,
+      "score": 2.6
+    },
+    {
+      "questionId": "uuid-q36",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 50 * 18?",
+      "options": {
+        "A": "900",
+        "B": "890",
+        "C": "910",
+        "D": "850"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 30,
+      "score": 2.7
+    },
+    {
+      "questionId": "uuid-q37",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 25 * 25?",
+      "options": {
+        "A": "625",
+        "B": "600",
+        "C": "650",
+        "D": "610"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 24,
+      "score": 2.5
+    },
+    {
+      "questionId": "uuid-q38",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 12 * 75?",
+      "options": {
+        "A": "900",
+        "B": "850",
+        "C": "920",
+        "D": "875"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 27,
+      "score": 2.8
+    },
+    {
+      "questionId": "uuid-q39",
+      "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
+      "questionText": "What is 40 * 22?",
+      "options": {
+        "A": "880",
+        "B": "860",
+        "C": "890",
+        "D": "850"
+      },
+      "correctAnswer": "A",
+      "difficultyLevel": 2,
+      "effortLevel": 28,
+      "score": 2.7
     }
   ]
 }
