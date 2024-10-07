@@ -1,9 +1,16 @@
-remove the buttons "Add New User" and "Load Questions" from the Dashboard page, since a user can be added in the selecte active user page and the load questions is not needed (the load data still is)
+analyze the way the app takes care of responsiveness for differnt screen sizes and resolutions (for mobile, tablet, pc, portrait, landscape). give me a concise list of what has bee done to this respect. the problems and possible simple solutions for that
 
-improve look and feel
+improve look and feel. button design.
+
+improve responsiveness.
+
+improve the design (location and organization of buttons)
+
 
 The reset button should have a warning/confirm option
 the reset button should bring the app to the same state as refresh
 
 
 the app should save at which dates and times each question was answered in the json file , not only the last time, but the times before, both for correct and incorrect. Then the app should use this information for a more intelligent way of building the next quiz: in the next quiz will be included not only questions not answered, but also the questions answered wrongly. In addition to that, the questions answered correctly, will be evaluated by how often it were answered wrongly and correctly and when these questions were answerd correctly, so that at the right time the questions will be added to the quiz for implementing a smart spaced repetition method for better learning.
+
+improve look and feel. new ideas.

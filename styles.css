@@ -34,9 +34,9 @@ body {
     flex-direction: column;
     /* Added to stack header, content, and footer vertically */
     min-height: 100vh;
+    font-size: 16px;
 }
 
-/* Content Wrapper */
 #content-wrapper {
     width: 100%;
     display: flex;
@@ -57,7 +57,7 @@ header {
 }
 
 header h1 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 5px;
 }
 
@@ -90,9 +90,9 @@ footer {
 /* Buttons and Inputs */
 button,
 label {
-    padding: 12px 20px;
-    margin: 5px;
-    font-size: 1em;
+    padding: 16px 24px;
+    margin: 8px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -100,6 +100,7 @@ label {
     background-color: var(--green-blue);
     /* Lighter green with a blue tone */
     color: var(--button-text);
+    min-width: 150px;
 }
 
 button:hover:not(:disabled),
@@ -151,10 +152,10 @@ input[type="text"],
 select,
 input[type="number"] {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1rem;
     transition: border-color 0.3s ease;
 }
 
@@ -176,6 +177,8 @@ input[type="number"]:focus {
     display: none;
     z-index: 2000;
     box-shadow: 0 2px 4px var(--shadow-color);
+    max-width: 90%;
+    word-wrap: break-word;
 }
 
 .message.success {
@@ -197,24 +200,24 @@ input[type="number"]:focus {
 }
 
 .question-number {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
 .question-text {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 15px;
 }
 
 .question-score {
-    font-size: 1em;
+    font-size: 1rem;
     margin-bottom: 20px;
 }
 
 .options label {
     display: block;
     margin-bottom: 10px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
@@ -243,6 +246,7 @@ input[type="number"]:focus {
 .action-buttons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 /* Results Styles */
@@ -261,6 +265,7 @@ input[type="number"]:focus {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fafafa;
+    word-wrap: break-word;
 }
 
 .review-item.correct {
@@ -272,7 +277,7 @@ input[type="number"]:focus {
 }
 
 .score-summary {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -317,10 +322,11 @@ input[type="number"]:focus {
 /* Return Button */
 .return-button {
     display: block;
-    margin: 0 auto;
-    padding: 12px 20px;
-    font-size: 1em;
+    margin: 20px auto 0 auto;
+    padding: 16px 24px;
+    font-size: 1rem;
     background-color: var(--green-blue);
+    min-width: 200px;
 }
 
 .return-button:hover {
@@ -333,12 +339,13 @@ input[type="number"]:focus {
 }
 
 .dashboard-container h2 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .dashboard-container p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .dashboard-container .menu-buttons {
@@ -358,10 +365,181 @@ input[type="number"]:focus {
 }
 
 .settings-container h2 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .settings-container p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-container h2,
+    .quiz-container h2,
+    .results-container h2,
+    .user-progress-container h2,
+    .settings-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .button-group,
+    .action-buttons,
+    .menu-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button,
+    label {
+        padding: 14px 20px;
+        margin: 8px 0;
+        font-size: 1rem;
+        min-width: 100%;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .quiz-container,
+    .results-container,
+    .user-progress-container {
+        padding: 20px;
+    }
+
+    .return-button {
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .dashboard-container h2,
+    .quiz-container h2,
+    .results-container h2,
+    .user-progress-container h2,
+    .settings-container h2 {
+        font-size: 1.9rem;
+    }
+
+    .button-group,
+    .action-buttons,
+    .menu-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    button,
+    label {
+        padding: 15px 22px;
+        margin: 8px;
+        font-size: 1rem;
+        min-width: 150px;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .quiz-container,
+    .results-container,
+    .user-progress-container {
+        padding: 22px;
+    }
+
+    .return-button {
+        width: 200px;
+        padding: 15px 22px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .dashboard-container h2,
+    .quiz-container h2,
+    .results-container h2,
+    .user-progress-container h2,
+    .settings-container h2 {
+        font-size: 2rem;
+    }
+
+    .button-group,
+    .action-buttons,
+    .menu-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    button,
+    label {
+        padding: 16px 24px;
+        margin: 10px;
+        font-size: 1rem;
+        min-width: 160px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .quiz-container,
+    .results-container,
+    .user-progress-container {
+        padding: 25px;
+    }
+
+    .return-button {
+        width: 200px;
+        padding: 16px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (orientation: landscape) {
+
+    .quiz-container,
+    .results-container,
+    .user-progress-container,
+    .settings-container,
+    .dashboard-container {
+        max-width: 90%;
+    }
+}
+
+@media (orientation: portrait) {
+
+    .quiz-container,
+    .results-container,
+    .user-progress-container,
+    .settings-container,
+    .dashboard-container {
+        max-width: 100%;
+    }
 }
