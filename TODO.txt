@@ -1,8 +1,6 @@
 improve UI
 
 
-how can i make the size of these buttons smaller ?
-
 
 how can i make the title bar be always visible on the top and only the rest of the page will scroll?
 
