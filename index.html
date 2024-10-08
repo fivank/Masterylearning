@@ -34,17 +34,20 @@
 
         <!-- Footer -->
         <footer>
-            <label for="load-file" id="load-label" role="button" tabindex="0" aria-label="Load Data">
-                <i class="fas fa-folder-open"></i> Load Data
-            </label>
-            <input type="file" id="load-file" accept=".json" aria-hidden="true">
-            <button id="save-button" disabled aria-disabled="true">
-                <i class="fas fa-save"></i> Save Data
-            </button>
-            <button id="reset-button">
-                <i class="fas fa-redo"></i> Reset
-            </button>
+            <div class="button-container">
+                <button id="load-button">
+                    <i class="fas fa-folder-open"></i> Load Data
+                </button>
+                <input type="file" id="load-file" accept=".json" aria-hidden="true" style="display:none;">
+                <button id="save-button" disabled aria-disabled="true">
+                    <i class="fas fa-save"></i> Save Data
+                </button>
+                <button id="reset-button">
+                    <i class="fas fa-redo"></i> Reset
+                </button>
+            </div>
         </footer>
+
     </div>
 
     <!-- JavaScript Code -->

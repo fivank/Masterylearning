@@ -1,11 +1,6 @@
 improve UI
 
 
-where is defined for the buttons in the bottom: load data, etc,... how they are structured and the container? where is the dark background defined?
-the size?? the color?
-
-how can i change it so that the buttons are in a single horizontal container with this dark color background but this container can grow downwards if needed and the buttons will rearrange one below the other or so automatically when the size is not big enough?
-
 how can i make the size of these buttons smaller ?
 
 

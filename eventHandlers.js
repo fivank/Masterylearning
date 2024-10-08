@@ -11,6 +11,12 @@ import { toggleSidebar } from './uiHelpers.js';
 export function setupGlobalEventListeners() {
     // File input for loading data
     const loadFileInput = document.getElementById('load-file');
+    const loadButton = document.getElementById('load-button');
+
+    loadButton.addEventListener('click', () => {
+        loadFileInput.click(); // Trigger the hidden file input
+    });
+
     loadFileInput.addEventListener('change', loadData);
 
     // Save button
