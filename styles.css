@@ -1,6 +1,6 @@
 /* Color Variables */
 :root {
-    --primary-background: #eaf2f6;
+    --primary-background: #e2eaee;
     /* Soft gray */
     --accent-teal: #1abc9c;
     /* Vibrant teal */
@@ -46,13 +46,32 @@ body {
 
 /* Header Styling */
 header {
+    position: fixed;
+    /* Makes the header always stay at the top */
+    top: 0;
+    /* Stays at the very top */
+    left: 0;
+    right: 0;
     background-color: var(--dark-bg);
     color: var(--button-text);
     padding: 20px 10px;
     text-align: center;
     flex-shrink: 0;
     box-shadow: 0 2px 4px var(--shadow-color);
+    z-index: 1000;
+    /* Ensures the header is above other elements */
 }
+
+#content-wrapper {
+    margin-top: 80px;
+    /* Add some margin to prevent content from being hidden behind the header */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 100vh;
+}
+
 
 header h1 {
     font-size: 2rem;
@@ -85,17 +104,22 @@ footer {
 /* Buttons and Inputs */
 button,
 label {
-    padding: 16px 24px;
-    margin: 8px;
-    font-size: 1rem;
+    padding: 12px 18px;
+    /* Reduced from 16px 24px to approximately 75% */
+    margin: 6px;
+    /* Reduced to keep proportions */
+    font-size: 0.60rem;
+    /* Reduced from 1rem to 0.60rem */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, outline 0.3s ease;
     background-color: var(--green-blue);
     color: var(--button-text);
-    min-width: 150px;
+    min-width: 112.5px;
+    /* Reduced from 150px to 75% */
 }
+
 
 button:hover:not(:disabled),
 label:hover {
