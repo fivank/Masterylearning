@@ -1,14 +1,121 @@
 {
-  "users": [],
+  "users": [
+    {
+      "userId": "d738db3f-3760-440b-b88d-31ed8c79bb7c",
+      "username": "Ivan",
+      "learningProgress": {
+        "questionsAnsweredCorrectly": [],
+        "questionsAnsweredWrong": [],
+        "questionsNotAnswered": [
+          "uuid-q10",
+          "uuid-q11",
+          "uuid-q12",
+          "uuid-q13",
+          "uuid-q14",
+          "uuid-q28",
+          "uuid-q30",
+          "uuid-q31",
+          "uuid-q32",
+          "uuid-q33",
+          "uuid-q34",
+          "uuid-q35",
+          "uuid-q36",
+          "uuid-q37",
+          "uuid-q38",
+          "uuid-q39"
+        ]
+      }
+    },
+    {
+      "userId": "73d09b14-d70c-4324-be93-77b885a07f15",
+      "username": "Sofía :)",
+      "learningProgress": {
+        "questionsAnsweredCorrectly": [
+          {
+            "questionId": "uuid-q14",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 1.5
+          },
+          {
+            "questionId": "uuid-q31",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 2.2
+          },
+          {
+            "questionId": "uuid-q12",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 1.5
+          },
+          {
+            "questionId": "uuid-q11",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 1.5
+          },
+          {
+            "questionId": "uuid-q38",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 2.8
+          },
+          {
+            "questionId": "uuid-q33",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 2.4
+          },
+          {
+            "questionId": "uuid-q10",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 1.5
+          }
+        ],
+        "questionsAnsweredWrong": [
+          {
+            "questionId": "uuid-q32",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 2.3
+          },
+          {
+            "questionId": "uuid-q30",
+            "dateTime": "2024-10-08T15:49:38.311Z",
+            "score": 2.5
+          }
+        ],
+        "questionsNotAnswered": [
+          "uuid-q13",
+          "uuid-q28",
+          "uuid-q34",
+          "uuid-q35",
+          "uuid-q36",
+          "uuid-q37",
+          "uuid-q39"
+        ]
+      }
+    }
+  ],
   "topics": [
     {
       "topicId": "1201717f-48f4-4488-ac92-66b3a5a3692e",
       "topicName": "Multiplication",
       "questions": [
-        "uuid-q10", "uuid-q11", "uuid-q12", "uuid-q13", "uuid-q14",
-        "uuid-q15", "uuid-q16", "uuid-q17", "uuid-q18", "uuid-q28",
-        "uuid-q30", "uuid-q31", "uuid-q32", "uuid-q33", "uuid-q34",
-        "uuid-q35", "uuid-q36", "uuid-q37", "uuid-q38", "uuid-q39"
+        "uuid-q10",
+        "uuid-q11",
+        "uuid-q12",
+        "uuid-q13",
+        "uuid-q14",
+        "uuid-q15",
+        "uuid-q16",
+        "uuid-q17",
+        "uuid-q18",
+        "uuid-q28",
+        "uuid-q30",
+        "uuid-q31",
+        "uuid-q32",
+        "uuid-q33",
+        "uuid-q34",
+        "uuid-q35",
+        "uuid-q36",
+        "uuid-q37",
+        "uuid-q38",
+        "uuid-q39"
       ]
     }
   ],
