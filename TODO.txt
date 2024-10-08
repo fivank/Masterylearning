@@ -16,15 +16,16 @@ in the page of the quiz results, where is it defined the position of the return 
 
 what has to change in the code to place the return to main menu button below the container with the quiz results?
 
+--
 
+support for languages
 
-
+considering the current architecture of the web app, what are the options if i would like to add languages support? explain the easiest ones (that require if possible change of less number of files)
 
 
 --
 
-
-improve responsiveness.
+improve responsiveness to screen sizes.
 
 improve the design (location and organization of buttons)
 
@@ -33,9 +34,20 @@ The reset button should have a warning/confirm option
 the reset button should bring the app to the same state as refresh
 
 
+
+--
+
+Algorithm for building the quiz:
+
 the app should save at which dates and times each question was answered in the json file , not only the last time, but the times before, both for correct and incorrect. Then the app should use this information for a more intelligent way of building the next quiz: in the next quiz will be included not only questions not answered, but also the questions answered wrongly. In addition to that, the questions answered correctly, will be evaluated by how often it were answered wrongly and correctly and when these questions were answerd correctly, so that at the right time the questions will be added to the quiz for implementing a smart spaced repetition method for better learning.
 
+
+--
+
 improve look and feel. new ideas.
+-	(option) add some music
+-	(option) add some nice pictures
+
 
 improve look and feel. button design.
 
@@ -45,4 +57,22 @@ UX
 the button "next question" within the quiz is not necessary. Where is the button and the behaviour specified in the code?
 
 how can i remove the button and make the quiz jump to the next question each time a question was answered?
+
+--
+
+improve the capabilities of the quiz:
+
+-	Include questions that allow to answer with numbers?
+-	Include quesitons that are open ended (also text) (advance)??
+-	How to add problems that consist of several steps? Mini questions???
+
+
+can the app have the option to select a topic or just make a standard quiz with mixed topics (interleaving vs focused learning)
+
+
+-	Undo Actions: Provide options to undo recent actions, such as adding a user or question.
+
+improve modularity for the html and for the css files as well
+
+understand the details and optimize by hand
 
